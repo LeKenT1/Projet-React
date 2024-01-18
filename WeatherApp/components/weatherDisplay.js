@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet, ActivityIndicator } from "react-native";
 
 const WeatherDisplay = ({ weatherData }) => {
   return (
@@ -22,7 +22,7 @@ const WeatherDisplay = ({ weatherData }) => {
         </View>
       ) : (
         <View style={styles.loadingContainer}>
-          <Text style={styles.loadingText}>Loading...</Text>
+          <ActivityIndicator size={100} color="gray" />
         </View>
       )}
     </View>
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   },
   loadingContainer: {
     alignItems: "center",
+    marginTop: 100,
   },
   loadingText: {
     fontSize: 18,

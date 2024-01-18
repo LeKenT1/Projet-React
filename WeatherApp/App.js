@@ -17,7 +17,6 @@ const WeatherApp = () => {
         const { latitude, longitude } = await getCurrentLocation();
         const data = await fetchWeatherData(latitude, longitude);
         const nextDaysData = await fetchWeatherNextDaysData(latitude, longitude);
-        console.log(nextDaysData);
         setWeatherData(data);
         setNextDaysData(nextDaysData)
       } catch (error) {
