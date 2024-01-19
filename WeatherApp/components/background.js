@@ -3,6 +3,7 @@ import { View, StyleSheet, ImageBackground } from "react-native";
 
 const Background = ({ weatherData }) => {
   const getImageSource = (weatherCondition) => {
+    // weatherCondition = '10n';
     switch (weatherCondition) {
       //day
       case "01d":
