@@ -66,13 +66,13 @@ const WeatherCarousel = ({ nextDaysData }) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 400,
-    height: 100,
+    height: 160,
   },
   background: {
     backgroundColor: "rgba(125, 125, 125, 0.3)",
     position: "absolute",
     left: "25%",
-    height: 100,
+    height: 160,
     width: 200,
     borderRadius: 15,
   },

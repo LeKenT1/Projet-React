@@ -3,44 +3,44 @@ import { View, StyleSheet, ImageBackground } from "react-native";
 
 const Background = ({ weatherData }) => {
   const getImageSource = (weatherCondition) => {
-    // weatherCondition = '10n';
+    weatherCondition = '01d';
     switch (weatherCondition) {
       //day
       case "01d":
-        return require("./pictures/clear_sky.jpg");
+        return require("./pictures/day/clear_sky.jpg");
       case "02d":
-        return require("./pictures/few_clouds.jpg");
+        return require("./pictures/day/few_clouds.jpg");
       case "03d":
       case "04d":
-        return require("./pictures/cloudy_sky.jpg");
+        return require("./pictures/day/cloudy_sky.jpg");
       case "09d":
       case "10d":
-        return require("./pictures/rain.jpg");
+        return require("./pictures/day/rain.jpg");
       case "11d":
-        return require("./pictures/thunderstorm.jpg");
+        return require("./pictures/day/thunderstorm.jpg");
       case "13d":
-        return require("./pictures/snow.jpg");
+        return require("./pictures/day/snow.jpg");
       case "50d":
-        return require("./pictures/mist.jpg");
+        return require("./pictures/day/mist.jpg");
       //night
       case "01n":
-        return require("./pictures/clear_sky.jpg");
+        return require("./pictures/night/rain.jpg");
       case "02n":
-        return require("./pictures/few_clouds.jpg");
+        return require("./pictures/night/rain.jpg");
       case "03n":
       case "04n":
-        return require("./pictures/cloudy_sky.jpg");
+        return require("./pictures/night/rain.jpg");
       case "09n":
       case "10n":
-        return require("./pictures/n_rain.jpg");
+        return require("./pictures/night/rain.jpg");
       case "11n":
-        return require("./pictures/thunderstorm.jpg");
+        return require("./pictures/night/thunderstorm.jpg");
       case "13n":
-        return require("./pictures/snow.jpg");
+        return require("./pictures/night/snow.jpg");
       case "50n":
-        return require("./pictures/mist.jpg");
+        return require("./pictures/night/rain.jpg");
       default:
-        return require("./pictures/clear_sky.jpg");
+        return require("./pictures/day/clear_sky.jpg");
     }
   };
 
