@@ -2,7 +2,6 @@ import React from "react";
 import { View, Image, Text, StyleSheet, ActivityIndicator } from "react-native";
 
 const WeatherDisplay = ({ weatherData, isDay }) => {
-  console.log(isDay);
   return (
     <View style={styles.weatherContainer}>
       {weatherData ? (

@@ -28,9 +28,9 @@ const WeatherApp = () => {
           longitude
         );
         setWeatherData(data);
-        // data.weather[0].icon[data.weather[0].icon.length - 1] === 'd'
-        //   ? setIsDay(true)
-        //   : setIsDay(false);
+        data.weather[0].icon[data.weather[0].icon.length - 1] === 'd'
+          ? setIsDay(true)
+          : setIsDay(false);
         setNextDaysData(nextDaysData);
       } catch (error) {
         console.error("Error on start:", error);

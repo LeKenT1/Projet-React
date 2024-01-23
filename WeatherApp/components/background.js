@@ -3,7 +3,6 @@ import { View, StyleSheet, ImageBackground } from "react-native";
 
 const Background = ({ weatherData }) => {
   const getImageSource = (weatherCondition) => {
-    weatherCondition = '01d';
     switch (weatherCondition) {
       //day
       case "01d":
@@ -24,12 +23,12 @@ const Background = ({ weatherData }) => {
         return require("./pictures/day/mist.jpg");
       //night
       case "01n":
-        return require("./pictures/night/rain.jpg");
+        return require("./pictures/night/clear_sky.jpg");
       case "02n":
-        return require("./pictures/night/rain.jpg");
+        return require("./pictures/night/few_clouds.jpg");
       case "03n":
       case "04n":
-        return require("./pictures/night/rain.jpg");
+        return require("./pictures/night/cloudy_sky.jpg");
       case "09n":
       case "10n":
         return require("./pictures/night/rain.jpg");
@@ -38,7 +37,7 @@ const Background = ({ weatherData }) => {
       case "13n":
         return require("./pictures/night/snow.jpg");
       case "50n":
-        return require("./pictures/night/rain.jpg");
+        return require("./pictures/night/mist.jpg");
       default:
         return require("./pictures/day/clear_sky.jpg");
     }
