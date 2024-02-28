@@ -2,6 +2,7 @@ import React from "react";
 import { View, Image, Text, StyleSheet, ScrollView } from "react-native";
 import Swiper from "react-native-swiper";
 import moment from "moment";
+import dayjs from "dayjs";
 import "moment/locale/fr";
 
 const WeatherCarousel = ({ nextDaysData }) => {
@@ -25,7 +26,10 @@ const WeatherCarousel = ({ nextDaysData }) => {
         <Swiper showsButtons={false} showsPagination={false} horizontal>
           {Object.keys(groupedDayData).map((dayOfWeek, index) => (
             <View style={styles.slide} key={index}>
-              {dayOfWeek === Object.keys(groupedDayData)[0] ? (
+              {dayjs(groupedDayData[dayOfWeek][0].dt_txt).isSame(
+                dayjs(),
+                "day"
+              ) ? (
                 <Text style={styles.dateHeader}>Aujourd'hui</Text>
               ) : (
                 <Text style={styles.dateHeader}>{dayOfWeek}</Text>
@@ -66,13 +70,13 @@ const WeatherCarousel = ({ nextDaysData }) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 400,
-    height: 100,
+    height: 160,
   },
   background: {
     backgroundColor: "rgba(125, 125, 125, 0.3)",
     position: "absolute",
     left: "25%",
-    height: 100,
+    height: 160,
     width: 200,
     borderRadius: 15,
   },

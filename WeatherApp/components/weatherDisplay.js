@@ -1,15 +1,19 @@
 import React from "react";
 import { View, Image, Text, StyleSheet, ActivityIndicator } from "react-native";
 
-const WeatherDisplay = ({ weatherData }) => {
+const WeatherDisplay = ({ weatherData, isDay }) => {
   return (
     <View style={styles.weatherContainer}>
       {weatherData ? (
         <View style={styles.weatherInfoContainer}>
-          <Text style={styles.cityName}>{weatherData.name}</Text>
-          <Text style={styles.temperature}>{weatherData.main.temp.toFixed(1)} °C</Text>
+          <Text style={[styles.cityName, { color: isDay ? 'black' : 'white' }]}>
+            {weatherData.name}
+          </Text>
+          <Text style={[styles.temperature, { color: isDay ? 'black' : 'white' }]}>
+            {weatherData.main.temp.toFixed(1)} °C
+          </Text>
           <View style={styles.descriptionContainer}>
-            <Text style={styles.weatherInfo}>
+            <Text style={[styles.weatherInfo, { color: isDay ? 'black' : 'white' }]}>
               {weatherData.weather[0].description}
             </Text>
             <Image

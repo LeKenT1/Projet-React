@@ -38,12 +38,12 @@ const WeatherApp = () => {
     };
     onStart();
   }, []);
-
+  
   return (
     <View style={styles.container}>
-      <Background weatherData={weatherData} isDay={isDay}/>
-      <WeatherDisplay weatherData={weatherData} />
-      <WeatherCarousel nextDaysData={nextDaysData} />
+      <Background weatherData={weatherData} />
+      <WeatherDisplay weatherData={weatherData} isDay={isDay}/>
+      <WeatherCarousel nextDaysData={nextDaysData} isDay={isDay}/>
     </View>
   );
 };
