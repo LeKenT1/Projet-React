@@ -1,10 +1,15 @@
 import { View, Text } from "react-native";
 import ListCocktail from "./ListCocktail";
+import DetailsCocktail from "./DetailsCocktail";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 export default function HomeScreen() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <ListCocktail/>
-      </View>
-    );
-  }
+  return (
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Liste des cocktails" component={ListCocktail} />
+      <Stack.Screen name="Details" component={DetailsCocktail} />
+    </Stack.Navigator>
+  );
+}
