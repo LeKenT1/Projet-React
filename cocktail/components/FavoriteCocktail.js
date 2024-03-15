@@ -31,9 +31,7 @@ const FavoriteCocktail = ({ navigation }) => {
   }, [navigation]);
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity
-      onPress={() => navigation.navigate("Details", { cocktailDetails: item })}
-    >
+    <TouchableOpacity>
       <View style={styles.itemContainer}>
         <Image source={{ uri: item.strDrinkThumb }} style={styles.image} />
         <View style={styles.titleHeartContainer}>
@@ -70,7 +68,7 @@ const FavoriteCocktail = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF9C4",
+    backgroundColor: "#f6bd60",
     paddingHorizontal: 10,
     paddingTop: 20,
     alignItems: "center",

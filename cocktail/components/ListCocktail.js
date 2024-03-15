@@ -158,7 +158,7 @@ const ListCocktail = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF9C4",
+    backgroundColor: "#f6bd60",
   },
   listContainer: {
     paddingHorizontal: 16,

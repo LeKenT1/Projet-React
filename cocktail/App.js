@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from "./components/HomeScreen";
 import FavoriteCocktail from "./components/FavoriteCocktail";
+import ProfilePage from "./components/ProfilePage";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,9 @@ export default function App() {
             } else if (route.name === 'Favoris') {
               iconName = focused ? 'heart' : 'heart-outline';
               return <Ionicons name={iconName} size={size} color={color} />;
+            } else if (route.name === 'Profile') {
+              iconName = focused ? 'person-circle-sharp' : 'person-circle-outline';
+              return <Ionicons name={iconName} size={size} color={color} />;
             }
           },
           tabBarActiveTintColor: 'tomato',
@@ -31,7 +35,8 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Accueil" component={HomeScreen} />
-        <Tab.Screen name="Favoris" component={FavoriteCocktail} initialParams={{ initialData: 'Initial data' }} />
+        <Tab.Screen name="Favoris" component={FavoriteCocktail}/>
+        <Tab.Screen name="Profile" component={ProfilePage}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -51,7 +51,7 @@ const DetailsScreen = ({ route }) => {
 const styles = StyleSheet.create({
   scrollViewContainer: {
     flexGrow: 1,
-    backgroundColor: "#FFF9C4",
+    backgroundColor: "#f6bd60",
   },
   container: {
     flex: 1,
