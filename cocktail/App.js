@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from "./components/HomeScreen";
 import FavoriteCocktail from "./components/FavoriteCocktail";
-import FavoriteCocktailsProvider from "./store/dataFavoriteCocktail";
 
 const Tab = createBottomTabNavigator();
 
